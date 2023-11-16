@@ -1,0 +1,33 @@
+{
+  "students": {
+    "addStudent": "Agregar Estudiante",
+    "createAcc": "Crear cuenta",
+    "deleteStudent": "Eliminar estudiante",
+    "editStudent": "Editar estudiante",
+    "msgClose": "Esta ventana se cerrará en",
+    "qrNotice": "Este código QR se actualiza todos los días",
+    "register": "Registrarse",
+    "seconds": "segundos"
+  },
+  "form": {
+    "activeWeek": "Mantener mi sesión activa por una semana",
+    "AlreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "cancel": "Cancelar",
+    "confirmPass": "Confirma tu contraseña",
+    "create": "Crear",
+    "dni": "ID de estudiante",
+    "email": "Correo",
+    "enterDNI": "Ingresa tu ID de estudiante",
+    "enterName": "Ingresa tu nombre",
+    "forgotPassword": "¿Has olvidado tu contraseña?",
+    "haveAccount": "¿No tienes una cuenta?",
+    "login": "Ingresar",
+    "name": "Nombre",
+    "password": "Contraseña",
+    "rememberMe": "Recordar mis credenciales",
+    "requestNewPass": "Solicitar nueva contraseña",
+    "restoreAccess": "Recupera tu acceso",
+    "typeToken": "Ingresa el token",
+    "verifyToken": "Verificar token"
+  }
+}

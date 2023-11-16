@@ -1,0 +1,33 @@
+{
+  "students": {
+    "addStudent": "Add Student",
+    "createAcc": "Create account",
+    "deleteStudent": "Delete student",
+    "editStudent": "Edit student",
+    "msgClose": "This window will close in",
+    "qrNotice": "This QR code is updated every single day",
+    "register": "Register",
+    "seconds": "seconds"
+  },
+  "form": {
+    "activeWeek": "Keep my session active for a week",
+    "AlreadyHaveAccount": "Already have an account?",
+    "cancel": "Cancel",
+    "confirmPass": "Confirm password",
+    "create": "Create",
+    "dni": "Student ID",
+    "email": "Email",
+    "enterDNI": "Type your student ID",
+    "enterName": "Type your name",
+    "forgotPassword": "Forgot Password?",
+    "haveAccount": "Don't have an account?",
+    "login": "Login",
+    "name": "Name",
+    "password": "Password",
+    "rememberMe": "Remember my credentials",
+    "requestNewPass": "Request new Password",
+    "restoreAccess": "Restore your access",
+    "typeToken": "Type the token",
+    "verifyToken": "Verify token"
+  }
+}
