@@ -77,10 +77,11 @@ const globalStyles = StyleSheet.create({
   },
   signUp: {
     marginVertical: 10,
-    flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'center',
   },
   btnSignUp: {
+    padding: 10,
     color: '#2dd4bf',
     fontWeight: 'bold',
   },

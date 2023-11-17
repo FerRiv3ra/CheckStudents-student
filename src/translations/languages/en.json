@@ -23,11 +23,38 @@
     "haveAccount": "Don't have an account?",
     "login": "Login",
     "name": "Name",
+    "surname": "Surname",
     "password": "Password",
+    "registeredUsers": "Registered users",
     "rememberMe": "Remember my credentials",
     "requestNewPass": "Request new Password",
     "restoreAccess": "Restore your access",
+    "goHome": "Go home",
+    "signUp": "Register",
+    "enterSurname": "Type your surnames",
     "typeToken": "Type the token",
     "verifyToken": "Verify token"
+  },
+  "ui": {
+    "add": "Add",
+    "changePass": "Change Password",
+    "close": "Close",
+    "delete": "Delete",
+    "edit": "Edit",
+    "goBack": "Go back",
+    "newPass": "New Pass",
+    "nothingToShow": "Nothing to show",
+    "save": "Save",
+    "welcome": "Welcome"
+  },
+  "settings": {
+    "chooseLang": "Choose your language",
+    "dark": "Dark",
+    "deleteUsers": "Delete registered users",
+    "english": "English",
+    "light": "Light",
+    "spanish": "Spanish",
+    "systemTheme": "System Theme",
+    "theme": "Theme"
   }
 }

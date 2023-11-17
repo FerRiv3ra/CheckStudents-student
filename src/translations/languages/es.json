@@ -10,8 +10,6 @@
     "seconds": "segundos"
   },
   "form": {
-    "activeWeek": "Mantener mi sesión activa por una semana",
-    "AlreadyHaveAccount": "¿Ya tienes una cuenta?",
     "cancel": "Cancelar",
     "confirmPass": "Confirma tu contraseña",
     "create": "Crear",
@@ -23,11 +21,38 @@
     "haveAccount": "¿No tienes una cuenta?",
     "login": "Ingresar",
     "name": "Nombre",
+    "surname": "Apellidos",
     "password": "Contraseña",
+    "registeredUsers": "Usuarios registrados",
     "rememberMe": "Recordar mis credenciales",
     "requestNewPass": "Solicitar nueva contraseña",
     "restoreAccess": "Recupera tu acceso",
     "typeToken": "Ingresa el token",
+    "goHome": "Volver al inicio",
+    "enterSurname": "Ingrese sus apellidos",
+    "signUp": "Registrar",
     "verifyToken": "Verificar token"
+  },
+  "ui": {
+    "add": "Agregar",
+    "changePass": "Cambiar contraseña",
+    "close": "Cerrar",
+    "delete": "Borrar",
+    "edit": "Editar",
+    "goBack": "Volver",
+    "newPass": "Nueva contraseña",
+    "nothingToShow": "Nada que mostrar",
+    "save": "Guardar",
+    "welcome": "Bienvenido"
+  },
+  "settings": {
+    "chooseLang": "Selecciona tu idioma",
+    "dark": "Oscuro",
+    "deleteUsers": "Eliminar usuarios registrados",
+    "english": "Inglés",
+    "light": "Claro",
+    "spanish": "Español",
+    "systemTheme": "Tema del sistema",
+    "theme": "Tema"
   }
 }

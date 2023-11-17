@@ -12,7 +12,7 @@ export interface ThemeState {
 export const lightTheme: ThemeState = {
   currentTheme: 'light',
   dark: false,
-  dividerColor: '#AAA',
+  dividerColor: '#333',
   listText: 'black',
   listSelected: '#ECFEFF',
   colors: {

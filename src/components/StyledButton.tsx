@@ -11,9 +11,12 @@ import {useTranslation} from 'react-i18next';
 
 import globalStyles from '../theme/globalStyles';
 import {ThemeContext} from '../context/ThemeContext';
+import Icon from 'react-native-vector-icons/Ionicons';
+import {View} from 'react-native-animatable';
 
 interface Props {
   text: string;
+  icon: string;
   size?: number;
   style?: StyleProp<ViewStyle>;
   disabled?: boolean;
@@ -24,6 +27,7 @@ interface Props {
 
 const StyledButton = ({
   text,
+  icon,
   size = 16,
   style,
   disabled = false,
@@ -53,9 +57,18 @@ const StyledButton = ({
       {disabled ? (
         <ActivityIndicator animating={disabled} />
       ) : (
-        <Text style={{...globalStyles.textBtn, color: colors.card}}>
-          {t(`${text}`)}
-        </Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Icon name={icon} color={colors.card} size={size} />
+          <Text style={{...globalStyles.textBtn, color: colors.card}}>
+            {' '}
+            {t(`form.${text}`)}
+          </Text>
+        </View>
       )}
     </TouchableOpacity>
   );
