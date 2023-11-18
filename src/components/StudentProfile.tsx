@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 
 import QRCode from 'react-native-qrcode-svg';
@@ -7,18 +7,16 @@ import * as Animatable from 'react-native-animatable';
 import {useTranslation} from 'react-i18next';
 
 import {heigthPercent, widthPercent} from '../helpers/scale';
-import BackgroundGradient from './BackgroundGradient';
+import {BackgroundGradient, StudentInformation} from './';
 import logoFromFile from '../assets/CheckStudentsRound.png';
-import {ThemeContext} from '../context/ThemeContext';
-import {StudentInformation} from './StudentInformation';
-import {useStudentProfile} from '../hooks/useStudentProfile';
-import {useFormatDate} from '../hooks/useFormatDate';
+import {useThemeContext} from '../context';
+import {useStudentProfile, useFormatDate} from '../hooks';
 
 export const StudentProfile = () => {
   const {t, i18n} = useTranslation();
   const {
     theme: {colors},
-  } = useContext(ThemeContext);
+  } = useThemeContext();
 
   const {time, today, activeUser} = useStudentProfile();
   const {format} = useFormatDate();

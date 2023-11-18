@@ -1,26 +1,22 @@
 import {View, Text, TouchableOpacity, Modal} from 'react-native';
-import React, {useContext} from 'react';
+import React from 'react';
 
 import {useTranslation} from 'react-i18next';
 
-import InputComponent from './InputComponent';
-import {useForm} from '../hooks/useForm';
+import {InputComponent, StyledButton, FormStudent} from './';
+import {useForm} from '../hooks';
 import globalStyles from '../theme/globalStyles';
-import {ThemeContext} from '../context/ThemeContext';
-import StyledButton from './StyledButton';
-import {FormStudent} from './FormStudent';
-import {AppContext} from '../context/AppContext';
+import {useThemeContext, useAppContext} from '../context';
 
 export const LoginForm = () => {
   const {dni, onChange, reset} = useForm({
     dni: '',
   });
   const {t} = useTranslation();
-  const {showModalAdd, toggleModal, users, setActiveUser} =
-    useContext(AppContext);
+  const {showModalAdd, toggleModal, users, setActiveUser} = useAppContext();
   const {
     theme: {colors},
-  } = useContext(ThemeContext);
+  } = useThemeContext();
 
   const handlePress = () => {
     const isOk = setActiveUser(dni);

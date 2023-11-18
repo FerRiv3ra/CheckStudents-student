@@ -1,4 +1,8 @@
-import {User} from '../context/appReducer';
+export type User = {
+  id: string;
+  name: string;
+  surname: string;
+};
 
 export type AppContextProps = {
   activeUser?: User;

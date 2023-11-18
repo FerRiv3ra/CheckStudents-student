@@ -1,8 +1,8 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import {ThemeContext} from '../context/ThemeContext';
+import {useThemeContext} from '../context';
 
 interface Props {
   children: React.ReactNode | React.ReactNode[];
@@ -10,14 +10,14 @@ interface Props {
   type: 1 | 2 | 3;
 }
 
-const BackgroundGradient = ({children, style, type = 3}: Props) => {
+export const BackgroundGradient = ({children, style, type = 3}: Props) => {
   let colors = [];
   const cords = {start: {x: 0, y: 0}, end: {x: 0, y: 0}};
   const {
     theme: {
       colors: {card, primary},
     },
-  } = useContext(ThemeContext);
+  } = useThemeContext();
 
   if (type === 1) {
     colors = [primary, card, card, card, card, card, primary];
@@ -46,5 +46,3 @@ const BackgroundGradient = ({children, style, type = 3}: Props) => {
     </LinearGradient>
   );
 };
-
-export default BackgroundGradient;

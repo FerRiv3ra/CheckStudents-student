@@ -1,19 +1,17 @@
 import React, {useState} from 'react';
 import {Pressable, Text, View} from 'react-native';
 
-import {Color} from '../types/colorType';
-
 interface Props {
   values: {key: string; value: string}[];
   onChange: (text: string) => void;
   selectedIndex?: number;
-  selectedTextColor?: Color;
-  backgroundColor?: Color;
-  tintColor?: Color;
-  textColor?: Color;
+  selectedTextColor?: string;
+  backgroundColor?: string;
+  tintColor?: string;
+  textColor?: string;
 }
 
-const SegmentedControl = ({
+export const SegmentedControl = ({
   values,
   onChange,
   selectedIndex = 0,
@@ -69,5 +67,3 @@ const SegmentedControl = ({
     </View>
   );
 };
-
-export default SegmentedControl;

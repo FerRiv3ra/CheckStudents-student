@@ -1,19 +1,19 @@
-import {Modal, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useContext, useState} from 'react';
+import {Modal, StyleSheet, TouchableOpacity, View} from 'react-native';
+import React, {useState} from 'react';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import {widthScale} from '../helpers/scale';
-import ModalSettings from './ModalSettings';
-import {ThemeContext} from '../context/ThemeContext';
+import {ModalSettings} from './';
+import {useThemeContext} from '../context';
 
-export default function SettingsButton() {
+export const SettingsButton = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const {top} = useSafeAreaInsets();
   const {
     theme: {dividerColor},
-  } = useContext(ThemeContext);
+  } = useThemeContext();
 
   return (
     <View style={{flexDirection: 'row'}}>
@@ -29,7 +29,7 @@ export default function SettingsButton() {
       </Modal>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   btn: {

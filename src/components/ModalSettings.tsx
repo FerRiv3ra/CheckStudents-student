@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {
   Pressable,
   Text,
@@ -8,20 +8,18 @@ import {
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {useTranslation} from 'react-i18next';
 
-import SegmentedControl from './SegmentedControl';
+import {SegmentedControl, CustomSwitch} from './';
 import {modalStyles} from '../theme/modalStyles';
-import {ThemeContext} from '../context/ThemeContext';
-import {CustomSwitch} from './CustomSwitch';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {AppContext} from '../context/AppContext';
+import {useThemeContext, useAppContext} from '../context';
 
 interface Props {
   setModalVisible: (modalVisible: boolean) => void;
 }
 
-const ModalSettings = ({setModalVisible}: Props) => {
+export const ModalSettings = ({setModalVisible}: Props) => {
   const {t, i18n} = useTranslation();
   const {
     theme: {colors, dark},
@@ -29,8 +27,8 @@ const ModalSettings = ({setModalVisible}: Props) => {
     autoTheme,
     setAutoTheme,
     actualTheme,
-  } = useContext(ThemeContext);
-  const {removeUsers} = useContext(AppContext);
+  } = useThemeContext();
+  const {removeUsers} = useAppContext();
 
   const setCurrentLang = async (lang: string) => {
     await AsyncStorage.setItem('lang', lang);
@@ -125,8 +123,6 @@ const ModalSettings = ({setModalVisible}: Props) => {
     </View>
   );
 };
-
-export default ModalSettings;
 
 const styles = StyleSheet.create({
   switch: {

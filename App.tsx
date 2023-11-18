@@ -3,9 +3,8 @@ import {I18nextProvider} from 'react-i18next';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import {MainScreen} from './src/screens/MainScreen';
-import {ThemeProvider} from './src/context/ThemeContext';
+import {ThemeProvider, AppProvider} from './src/context';
 import i18n from './src/translations/i18nConfig';
-import {AppProvider} from './src/context/AppContext';
 
 const App = () => {
   return (

@@ -1,8 +1,4 @@
-export type User = {
-  id: string;
-  name: string;
-  surname: string;
-};
+import {User} from '../types/appContextProps';
 
 export type AppState = {
   showModalAdd: boolean;

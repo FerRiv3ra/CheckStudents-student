@@ -1,18 +1,18 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {
   ActivityIndicator,
   StyleProp,
   Text,
   TouchableOpacity,
   ViewStyle,
+  View,
 } from 'react-native';
 
 import {useTranslation} from 'react-i18next';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import globalStyles from '../theme/globalStyles';
-import {ThemeContext} from '../context/ThemeContext';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {View} from 'react-native-animatable';
+import {useThemeContext} from '../context';
 
 interface Props {
   text: string;
@@ -25,7 +25,7 @@ interface Props {
   onPress: () => void;
 }
 
-const StyledButton = ({
+export const StyledButton = ({
   text,
   icon,
   size = 16,
@@ -38,7 +38,7 @@ const StyledButton = ({
   const {t} = useTranslation();
   const {
     theme: {colors},
-  } = useContext(ThemeContext);
+  } = useThemeContext();
 
   return (
     <TouchableOpacity
@@ -73,5 +73,3 @@ const StyledButton = ({
     </TouchableOpacity>
   );
 };
-
-export default StyledButton;

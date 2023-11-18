@@ -1,8 +1,8 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Pressable, Text, TextInput, View} from 'react-native';
 
 import globalStyles from '../theme/globalStyles';
-import {ThemeContext} from '../context/ThemeContext';
+import {useThemeContext} from '../context/ThemeContext';
 
 interface Props {
   title: string;
@@ -15,7 +15,7 @@ interface Props {
   onPress?: () => void;
 }
 
-const InputComponent = ({
+export const InputComponent = ({
   onChangeText,
   onPress,
   passVisible,
@@ -27,7 +27,7 @@ const InputComponent = ({
 }: Props) => {
   const {
     theme: {colors, dark, dividerColor},
-  } = useContext(ThemeContext);
+  } = useThemeContext();
 
   return (
     <View>
@@ -67,5 +67,3 @@ const InputComponent = ({
     </View>
   );
 };
-
-export default InputComponent;

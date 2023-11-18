@@ -1,49 +1,29 @@
 {
-  "students": {
-    "addStudent": "Agregar Estudiante",
-    "createAcc": "Crear cuenta",
-    "deleteStudent": "Eliminar estudiante",
-    "editStudent": "Editar estudiante",
-    "msgClose": "Esta ventana se cerrará en",
-    "qrNotice": "Este código QR se actualiza todos los días",
-    "register": "Registrarse",
-    "seconds": "segundos"
+  "alerts": {
+    "allFieldsRequired": "Todos los campos son requeridos",
+    "idIsShort": "ID muy corto",
+    "nameIsShort": "El nombre es muy corto",
+    "surnameIsShort": "El apellido muy corto",
+    "userRegistered": "Usuario registrado",
+    "success": "Éxito",
+    "deleteAll": "¿Esta seguro que desea eliminar todos los usuarios?",
+    "yesDelete": "Sí, eliminar",
+    "alert": "Alerta",
+    "noUsers": "No hay usuarios registrados",
+    "userNotFound": "Usuario no encontrado"
   },
   "form": {
     "cancel": "Cancelar",
-    "confirmPass": "Confirma tu contraseña",
-    "create": "Crear",
     "dni": "ID de estudiante",
-    "email": "Correo",
     "enterDNI": "Ingresa tu ID de estudiante",
     "enterName": "Ingresa tu nombre",
-    "forgotPassword": "¿Has olvidado tu contraseña?",
-    "haveAccount": "¿No tienes una cuenta?",
+    "enterSurname": "Ingrese sus apellidos",
+    "goHome": "Volver al inicio",
     "login": "Ingresar",
     "name": "Nombre",
-    "surname": "Apellidos",
-    "password": "Contraseña",
     "registeredUsers": "Usuarios registrados",
-    "rememberMe": "Recordar mis credenciales",
-    "requestNewPass": "Solicitar nueva contraseña",
-    "restoreAccess": "Recupera tu acceso",
-    "typeToken": "Ingresa el token",
-    "goHome": "Volver al inicio",
-    "enterSurname": "Ingrese sus apellidos",
-    "signUp": "Registrar",
-    "verifyToken": "Verificar token"
-  },
-  "ui": {
-    "add": "Agregar",
-    "changePass": "Cambiar contraseña",
-    "close": "Cerrar",
-    "delete": "Borrar",
-    "edit": "Editar",
-    "goBack": "Volver",
-    "newPass": "Nueva contraseña",
-    "nothingToShow": "Nada que mostrar",
-    "save": "Guardar",
-    "welcome": "Bienvenido"
+    "register": "Registrar",
+    "surname": "Apellidos"
   },
   "settings": {
     "chooseLang": "Selecciona tu idioma",
@@ -54,5 +34,17 @@
     "spanish": "Español",
     "systemTheme": "Tema del sistema",
     "theme": "Tema"
+  },
+  "students": {
+    "msgClose": "Esta ventana se cerrará en",
+    "qrNotice": "Este código QR se actualiza todos los días",
+    "seconds": "segundos"
+  },
+  "ui": {
+    "add": "Agregar",
+    "close": "Cerrar",
+    "goBack": "Volver",
+    "save": "Guardar",
+    "welcome": "Bienvenido"
   }
 }

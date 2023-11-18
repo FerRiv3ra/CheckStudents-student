@@ -1,9 +1,15 @@
-import React, {createContext, useEffect, useReducer, useState} from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from 'react';
 import {Appearance, useColorScheme} from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import {ThemeState, themeReducer, lightTheme, darkTheme} from './themeReducer';
+import {ThemeState, themeReducer, lightTheme, darkTheme} from './';
 
 interface ThemeContextProps {
   theme: ThemeState;
@@ -85,4 +91,14 @@ export const ThemeProvider = ({children}: any) => {
       {children}
     </ThemeContext.Provider>
   );
+};
+
+export const useThemeContext = () => {
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+    throw new Error('ThemeContext must be used within a ThemeProvider');
+  }
+
+  return context;
 };

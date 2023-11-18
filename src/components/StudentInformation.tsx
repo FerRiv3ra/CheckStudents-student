@@ -1,11 +1,11 @@
 import {Text, StyleSheet} from 'react-native';
-import React, {useContext} from 'react';
+import React from 'react';
 
 import * as Animatable from 'react-native-animatable';
 import {useTranslation} from 'react-i18next';
 
-import {ThemeContext} from '../context/ThemeContext';
-import {User} from '../context/appReducer';
+import {useThemeContext} from '../context';
+import {User} from '../types/appContextProps';
 
 type Props = {
   user: User;
@@ -15,7 +15,7 @@ type Props = {
 export const StudentInformation = ({user, date}: Props) => {
   const {
     theme: {colors},
-  } = useContext(ThemeContext);
+  } = useThemeContext();
   const {t} = useTranslation();
 
   return (

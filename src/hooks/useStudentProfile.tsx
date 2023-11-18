@@ -1,13 +1,13 @@
-import {useContext, useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {AppContext} from '../context/AppContext';
+import {useAppContext} from '../context';
 
 export const useStudentProfile = () => {
   const [time, setTime] = useState(60);
   const timerRef = useRef(time);
 
-  const {removeActiveUser, toggleProfile, activeUser} = useContext(AppContext);
+  const {removeActiveUser, toggleProfile, activeUser} = useAppContext();
 
   const today = new Date();
 

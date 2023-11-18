@@ -1,48 +1,28 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Text, View} from 'react-native';
 
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import * as Animatable from 'react-native-animatable';
 import {useTranslation} from 'react-i18next';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import globalStyles from '../theme/globalStyles';
 import {widthScale} from '../helpers/scale';
-import {useForm} from '../hooks/useForm';
-import BackgroundGradient from '../components/BackgroundGradient';
-import StyledButton from '../components/StyledButton';
-
-import {ThemeContext} from '../context/ThemeContext';
-import InputComponent from '../components/InputComponent';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {AppContext} from '../context/AppContext';
-import {User} from '../context/appReducer';
+import {BackgroundGradient, StyledButton, InputComponent} from './';
+import {useFormStudent} from '../hooks';
 
 export const FormStudent = () => {
-  const {name, id, surname, onChange, reset} = useForm({
-    name: '',
-    id: '',
-    surname: '',
-  });
-  const {t} = useTranslation();
   const {
-    theme: {colors, dividerColor},
-  } = useContext(ThemeContext);
-  const {toggleModal, addUser} = useContext(AppContext);
-
-  const handlePress = async () => {
-    const user: User = {
-      id,
-      name,
-      surname,
-    };
-
-    const isOk = await addUser(user);
-
-    if (isOk) {
-      reset();
-      toggleModal();
-    }
-  };
+    colors,
+    dividerColor,
+    handlePress,
+    id,
+    name,
+    onChange,
+    surname,
+    toggleModal,
+  } = useFormStudent();
+  const {t} = useTranslation();
 
   return (
     <BackgroundGradient type={2}>
@@ -63,7 +43,7 @@ export const FormStudent = () => {
         style={{...globalStyles.formContainer, backgroundColor: colors.card}}>
         <KeyboardAwareScrollView>
           <Text style={{...globalStyles.txtWelcome, color: colors.text}}>
-            {t('students.register')}
+            {t('form.register')}
           </Text>
           <View>
             <InputComponent
@@ -86,7 +66,7 @@ export const FormStudent = () => {
             />
             <View style={{marginTop: 5}}>
               <StyledButton
-                text="signUp"
+                text="register"
                 icon="log-in"
                 animated
                 disabled={false}

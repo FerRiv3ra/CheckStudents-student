@@ -1,51 +1,29 @@
 {
-  "students": {
-    "addStudent": "Add Student",
-    "createAcc": "Create account",
-    "deleteStudent": "Delete student",
-    "editStudent": "Edit student",
-    "msgClose": "This window will close in",
-    "qrNotice": "This QR code is updated every single day",
-    "register": "Register",
-    "seconds": "seconds"
+  "alerts": {
+    "allFieldsRequired": "All fields are required",
+    "idIsShort": "ID is too short",
+    "nameIsShort": "Name is too short",
+    "surnameIsShort": "Surname is too short",
+    "userRegistered": "User registered",
+    "success": "Success",
+    "deleteAll": "Are you sure you want to delete all users?",
+    "yesDelete": "Yes, delete",
+    "alert": "Alert",
+    "noUsers": "There are no registered users",
+    "userNotFound": "User not found"
   },
   "form": {
-    "activeWeek": "Keep my session active for a week",
-    "AlreadyHaveAccount": "Already have an account?",
     "cancel": "Cancel",
-    "confirmPass": "Confirm password",
-    "create": "Create",
     "dni": "Student ID",
-    "email": "Email",
     "enterDNI": "Type your student ID",
     "enterName": "Type your name",
-    "forgotPassword": "Forgot Password?",
-    "haveAccount": "Don't have an account?",
+    "enterSurname": "Type your surname",
+    "goHome": "Go home",
     "login": "Login",
     "name": "Name",
-    "surname": "Surname",
-    "password": "Password",
     "registeredUsers": "Registered users",
-    "rememberMe": "Remember my credentials",
-    "requestNewPass": "Request new Password",
-    "restoreAccess": "Restore your access",
-    "goHome": "Go home",
-    "signUp": "Register",
-    "enterSurname": "Type your surnames",
-    "typeToken": "Type the token",
-    "verifyToken": "Verify token"
-  },
-  "ui": {
-    "add": "Add",
-    "changePass": "Change Password",
-    "close": "Close",
-    "delete": "Delete",
-    "edit": "Edit",
-    "goBack": "Go back",
-    "newPass": "New Pass",
-    "nothingToShow": "Nothing to show",
-    "save": "Save",
-    "welcome": "Welcome"
+    "register": "Register",
+    "surname": "Surname"
   },
   "settings": {
     "chooseLang": "Choose your language",
@@ -56,5 +34,17 @@
     "spanish": "Spanish",
     "systemTheme": "System Theme",
     "theme": "Theme"
+  },
+  "students": {
+    "msgClose": "This window will close in",
+    "qrNotice": "This QR code is updated every day",
+    "seconds": "seconds"
+  },
+  "ui": {
+    "add": "Add",
+    "close": "Close",
+    "goBack": "Go back",
+    "save": "Save",
+    "welcome": "Welcome"
   }
 }

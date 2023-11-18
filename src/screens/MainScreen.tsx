@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Modal} from 'react-native';
 
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -7,20 +7,20 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import globalStyles from '../theme/globalStyles';
 // import BottomBannerAd from '../components/BottomBannerAd';
-import BackgroundGradient from '../components/BackgroundGradient';
-
-import {ThemeContext} from '../context/ThemeContext';
+import {
+  BackgroundGradient,
+  SettingsButton,
+  StudentProfile,
+  LoginForm,
+} from '../components';
+import {useThemeContext, useAppContext} from '../context';
 import {widthScale} from '../helpers/scale';
-import {LoginForm} from '../components/LoginForm';
-import {StudentProfile} from '../components/StudentProfile';
-import SettingsButton from '../components/SettingsButton';
-import {AppContext} from '../context/AppContext';
 
 export const MainScreen = () => {
   const {
     theme: {colors},
-  } = useContext(ThemeContext);
-  const {showProfile} = useContext(AppContext);
+  } = useThemeContext();
+  const {showProfile} = useAppContext();
 
   return (
     <BackgroundGradient type={2}>
